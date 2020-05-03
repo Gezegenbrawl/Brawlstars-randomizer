@@ -1,0 +1,46 @@
+<html lang="tr">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="myDiv">
+		<img id="mi" src="", width="256", height="256">
+	</div>
+
+	<img id="br" src="bw.png" width="256" height="190" title="Roll">
+	<label id="lbl">Empty</label>
+	<a onclick="deneme()">
+		<img src="button.png" width="128" height="64">
+	</a>
+
+	<h2>Roll</h2>
+
+	<!--<button id="roll" onclick="deneme()">Roll</button>-->
+	<!--<a href=""><i class="fa fa-cog fa-3x"></i></a>-->
+	<script>
+		var arr = ["Barley", "Bo", "Brock", "Bull", "Colt", "Darryl", "Dinamike", "Jessie", "Mortis", "Nita", "Pam", "Penny", "Piper", "Poco", "Primo", "Shelly", "Tara"]
+
+		function shuffle(array) {
+  			array.sort(() => Math.random() - 0.5);
+		}
+
+		function deneme() {
+			for (var i = 0; i < arr.length; i++) 
+			{
+				shuffle(arr);
+				var rndm = arr[Math.floor(Math.random() * arr.length)];	
+				console.table(arr);	
+				var lbl = document.getElementById("lbl").innerHTML = rndm;
+				var mb = document.getElementById("mi").src = "RENDERS V2/" + rndm + ".png";
+			}
+		}
+	</script>
+	
+</body>
+
+</html>
